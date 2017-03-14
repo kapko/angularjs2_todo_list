@@ -2,7 +2,6 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-
   entry: {
     'app': './src/main.ts',
     'polyfills': [
@@ -12,7 +11,7 @@ module.exports = {
     ]
   },
   output: {
-    path: './dist',
+    path: './public',
     filename: '[name].[hash].js'
   },
   module: {
@@ -39,5 +38,4 @@ module.exports = {
       }
     })
   ]
-  
 };
