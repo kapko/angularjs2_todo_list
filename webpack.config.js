@@ -3,7 +3,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    'app': './src/main.ts',
+    'app': './src/main',
     'polyfills': [
       'core-js/es6',
       'core-js/es7/reflect',
