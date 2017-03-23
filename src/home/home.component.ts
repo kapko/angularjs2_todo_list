@@ -2,27 +2,32 @@ import {Component, Inject} from '@angular/core'
 
 @Component({
 	selector: 'home',
-	template: `<input 
+	template: `
+	<input 
+		(keyup.enter)="addNewPerson(name)"
 		[(ngModel)]="name"
-		type="text" 
-		(keyup.enter)="search(name)"
-		placeholder="search" />
-		<list></list>`
+		type="text" />
+
+	<ul><li *ngFor="let user of names">{{ user.name }}</li></ul>`
 })
 
 export class HomeComponent{
 	name: string = '';
-	
-	constructor(
-		@Inject('user') private users
-	){}
+	names = [
+		{
+			name: 'Alex'
+		},
+		{
+			name: 'Matt'
+		}
+	]
 
-	search(e){
-		this.users.users.push({
-			name: e,
-			status: 1,
-		});
+	addNewPerson(e){
+		this.names.push({name: e});
+		
 		this.name = '';
 	}
+
+
 }
 

@@ -2,7 +2,6 @@ import { Component, NgModule  } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'
 import {HomeModule} from './home/home.module.ts'
-import {UserSevice} from './services/user.ts'
 
 @Component({
 	selector: 'app', 
@@ -19,12 +18,6 @@ export class AppComponent{}
 	],
 	declarations: [ AppComponent ],
 	bootstrap: [ AppComponent ],
-	providers: [
-		{
-			provide: 'user',
-			useClass: UserSevice,
-		}
-	]
 }) 
 
 export class AppModule{}
