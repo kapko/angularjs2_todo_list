@@ -17,7 +17,7 @@ export class AppComponent{}
 		BrowserModule,
 	],
 	declarations: [ AppComponent ],
-	bootstrap: [ AppComponent ]
+	bootstrap: [ AppComponent ],
 }) 
 
 export class AppModule{}
