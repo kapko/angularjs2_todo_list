@@ -24,10 +24,8 @@ export class HomeComponent{
 
 	addNewPerson(e){
 		this.names.push({name: e});
-		
+
 		this.name = '';
 	}
-
-
 }
 
