@@ -1,33 +1,22 @@
-import {Component, Inject} from '@angular/core'
+import { Component  } from '@angular/core'
 
 @Component({
 	selector: 'home',
-	template: `
-	<input 
-		(keyup.enter)="addNewPerson(name)"
-		[(ngModel)]="name"
-		type="text" />
-
-	<ul><li *ngFor="let user of names">{{ user.name }}</li></ul>`
+	template: `<ul>
+		<li *ngFor="let name of names; let i = index">
+		{{ i }} {{ name.surname }} </li>
+	</ul>`
 })
 
 export class HomeComponent{
-	name: string = '';
-	names = [
+	name: string = 'Leo';
+	names: any  = [
 		{
-			name: 'Alex'
+			surname: 'Alex'
 		},
 		{
-			name: 'Matt'
+			surname: 'John'
 		}
-	]
-
-	addNewPerson(e){
-		this.names.push({name: e});
-		
-		this.name = '';
-	}
-
+	];
 
 }
-

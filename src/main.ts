@@ -5,16 +5,15 @@ import {HomeModule} from './home/home.module.ts'
 
 @Component({
 	selector: 'app', 
-	template: `<h1>Hello World</h1>
-	<home></home>`
+	template: `<h1>Hello World!</h1> <home></home>`
 })
 
 export class AppComponent{}
 
 @NgModule({
 	imports: [ 
-		HomeModule,
 		BrowserModule,
+		HomeModule,
 	],
 	declarations: [ AppComponent ],
 	bootstrap: [ AppComponent ],
